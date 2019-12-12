@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgMaterialIconModule } from 'ng-material-icon';
-import { EditorModule } from '@tinymce/tinymce-angular';
+// import { EditorModule } from '@tinymce/tinymce-angular';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,7 +27,8 @@ import { CreatePostComponent } from './create-post/create-post.component';
     HttpClientModule,
     FormsModule,
     NgMaterialIconModule,
-    EditorModule
+    // EditorModule
+    CKEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

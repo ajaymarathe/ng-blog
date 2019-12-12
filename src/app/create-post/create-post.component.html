@@ -5,9 +5,9 @@
       <div class="form-group">
         <input type="text" [(ngModel)]="title" class="form-control" placeholder="Title..">
       </div>
-      <editor [(ngModel)]="PostData" ></editor>
+      <ckeditor [(ngModel)]="PostData" [editor]="Editor"></ckeditor>
       <div class="form-group mt-3">
-        <button class="btn btn-primary" (click)="PublishPost()">Save</button>
+        <button class="btn btn-primary btn-block btn-lg" (click)="PublishPost()">Save</button>
       </div>
     </div>
   </div>

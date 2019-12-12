@@ -19,6 +19,8 @@
     "@angular/platform-browser": "~8.2.5",
     "@angular/platform-browser-dynamic": "~8.2.5",
     "@angular/router": "~8.2.5",
+    "@ckeditor/ckeditor5-angular": "^1.1.2",
+    "@ckeditor/ckeditor5-build-classic": "^16.0.0",
     "@tinymce/tinymce-angular": "^3.3.1",
     "bootcatch-themes": "^2.2.0",
     "bootstrap": "^4.4.1",

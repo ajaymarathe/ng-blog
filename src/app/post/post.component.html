@@ -7,6 +7,18 @@
           <h3>{{ post.title }}</h3>
           <p [innerHTML]="post.description"></p>
         </div>
+        <div class="card-footer d-flex justify-content-end">
+          <div class="dropdown">
+            <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <ng-material-icon class="d-flex align-items-center" icon="more_vert"  size="1.5"></ng-material-icon>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" >Edit Post</a>
+              <a class="dropdown-item" routerLink="create">Delete Post</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
