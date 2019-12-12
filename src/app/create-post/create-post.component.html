@@ -1,0 +1,14 @@
+<base-nav></base-nav>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="form-group">
+        <input type="text" [(ngModel)]="title" class="form-control" placeholder="Title..">
+      </div>
+      <editor [(ngModel)]="PostData" ></editor>
+      <div class="form-group mt-3">
+        <button class="btn btn-primary" (click)="PublishPost()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
