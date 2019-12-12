@@ -1,0 +1,10 @@
+<ul class="nav bg-primary py-2">
+  <li class="nav-item" *ngIf="CurrentRoute == '/' ">
+    <a class="nav-link logo active" href="#">NgBlog</a>
+  </li>
+  <li class="nav-item" *ngIf="CurrentRoute !== '/' ">
+    <a class="nav-link" (click)="backClicked()">
+      <ng-material-icon class="d-flex align-items-center" icon="keyboard_arrow_left"  size="1.5"></ng-material-icon>
+    </a>
+  </li>
+</ul>

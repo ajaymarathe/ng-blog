@@ -1,1 +1,13 @@
-<p>post works!</p>
+<base-nav></base-nav>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body" *ngIf="post">
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
