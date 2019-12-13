@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgMaterialIconModule } from 'ng-material-icon';
-// import { EditorModule } from '@tinymce/tinymce-angular';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +12,9 @@ import { HomeComponent } from './home/home.component';
 import { BaseNavComponent } from './base-nav/base-nav.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { EditPostComponent } from './edit-post/edit-post.component';
+import { AdminComponent } from './admin/admin.component';
+import { RegisterComponent } from './auth/register/register.component';
+import {LoginComponent} from './auth/login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,10 @@ import { EditPostComponent } from './edit-post/edit-post.component';
     HomeComponent,
     BaseNavComponent,
     CreatePostComponent,
-    EditPostComponent
+    EditPostComponent,
+    AdminComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
