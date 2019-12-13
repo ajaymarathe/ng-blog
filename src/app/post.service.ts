@@ -24,4 +24,17 @@ export class PostService {
       description: post[1],
     });
   }
+
+  UpdatePost(updateData){
+    return this.http.patch('http://localhost:8000/api/posts/' + updateData[2],{
+      title: updateData[0],
+      slug: updateData[0],
+      description: updateData[1],
+    });
+  }
+
+  // delete post
+  DeleteShot(slug) {
+    return this.http.delete('http://localhost:8000/api/posts/' + slug);
+  }
 }

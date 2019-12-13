@@ -12,6 +12,7 @@ import { PostComponent } from './post/post.component';
 import { HomeComponent } from './home/home.component';
 import { BaseNavComponent } from './base-nav/base-nav.component';
 import { CreatePostComponent } from './create-post/create-post.component';
+import { EditPostComponent } from './edit-post/edit-post.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CreatePostComponent } from './create-post/create-post.component';
     PostComponent,
     HomeComponent,
     BaseNavComponent,
-    CreatePostComponent
+    CreatePostComponent,
+    EditPostComponent
   ],
   imports: [
     BrowserModule,

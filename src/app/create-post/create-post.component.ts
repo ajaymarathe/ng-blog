@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from '../post.service.js';
+import { PostService } from '../post.service';
 import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-post',
