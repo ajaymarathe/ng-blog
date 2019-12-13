@@ -8,6 +8,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
+  // logged in user
   Login(loginData) {
      return this.http.post('http://localhost:8000/api/login', {
        email: loginData[0],
