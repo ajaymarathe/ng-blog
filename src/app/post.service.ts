@@ -38,15 +38,14 @@ export class PostService {
     return this.http.delete('http://localhost:8000/api/posts/' + slug);
   }
 
-
   // pagination
   // Get next page
-  GetNextPage() {
-    return this.http.get('http://localhost:8000/api/posts?page=2');
+  GetNextPage(nextPage) {
+    return this.http.get(nextPage);
   }
 
-  PrevPost(){
-    return this.http.get('http://localhost:8000/api/posts?page=1');
+  PrevPost(prevPage){
+    return this.http.get(prevPage);
   }
 }
 
