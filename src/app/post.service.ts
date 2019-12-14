@@ -37,4 +37,16 @@ export class PostService {
   DeleteShot(slug) {
     return this.http.delete('http://localhost:8000/api/posts/' + slug);
   }
+
+
+  // pagination
+  // Get next page
+  GetNextPage() {
+    return this.http.get('http://localhost:8000/api/posts?page=2');
+  }
+
+  PrevPost(){
+    return this.http.get('http://localhost:8000/api/posts?page=1');
+  }
 }
+

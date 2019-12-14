@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgMaterialIconModule } from 'ng-material-icon';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { DataTablesModule } from 'angular-datatables';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,7 +16,6 @@ import { EditPostComponent } from './edit-post/edit-post.component';
 import { AdminComponent } from './admin/admin.component';
 import { RegisterComponent } from './auth/register/register.component';
 import {LoginComponent} from './auth/login/login.component';
-import { DatatableComponent } from './datatable/datatable.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,6 @@ import { DatatableComponent } from './datatable/datatable.component';
     AdminComponent,
     LoginComponent,
     RegisterComponent,
-    DatatableComponent
   ],
   imports: [
     BrowserModule,
@@ -36,8 +35,8 @@ import { DatatableComponent } from './datatable/datatable.component';
     HttpClientModule,
     FormsModule,
     NgMaterialIconModule,
-    // EditorModule
-    CKEditorModule
+    DataTablesModule,
+    CKEditorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
