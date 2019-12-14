@@ -5,26 +5,28 @@
       <div class="card mb-4" *ngFor="let post of posts">
         <div class="card-body">
           <h3>{{ post.title }}</h3>
-          <p [innerHTML]="post.description"></p>
+          <p  [innerHTML]="post.description | limitTo:  150 "></p>
           <button class="btn btn-primary" [routerLink]="'post/'+post.slug" >More</button>
         </div>
       </div>
       <!--pagination-->
-      <nav  aria-label="Page navigation example">
-        <ul class="pagination" *ngIf="paginate">
-          <li class="page-item">
-            <a class="page-link" (click)="PreviousPage()" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">{{ paginate.meta.current_page }}</a></li>
-          <li class="page-item">
-            <a class="page-link" (click)="NextPage()" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <div class="d-flex justify-content-center">
+        <nav  aria-label="Page navigation example">
+          <ul class="pagination" *ngIf="paginate">
+            <li class="page-item">
+              <a class="page-link" (click)="PreviousPage()" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">{{ paginate.meta.current_page }}</a></li>
+            <li class="page-item">
+              <a class="page-link" (click)="NextPage()" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </div>
 </div>

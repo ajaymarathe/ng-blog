@@ -1,6 +1,7 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12">
+<base-nav></base-nav>
+<div class="container-fluid mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
       <h1 class="h2">Admin</h1>
       <table class=" table table-striped">
         <thead>
@@ -15,11 +16,31 @@
         <tr *ngFor="let post of posts">
           <td>{{ post.id }}</td>
           <td>{{ post.title }}</td>
-          <td>Edit</td>
-          <td>Delete</td>
+          <td><a  [routerLink]="['/edit',post.slug]">Edit</a></td>
+          <td><a (click)="DeletePost(post.slug)">Delete</a></td>
         </tr>
         </tbody>
       </table>
+
+<!--      pagination-->
+      <!--pagination-->
+      <div class="d-flex justify-content-center">
+        <nav  aria-label="Page navigation example">
+          <ul class="pagination" *ngIf="paginate">
+            <li class="page-item">
+              <a class="page-link" (click)="PreviousPage()" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">{{ paginate.meta.current_page }}</a></li>
+            <li class="page-item">
+              <a class="page-link" (click)="NextPage()" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
 <!--      <div class="table-responsive">-->
 <!--        <table datatable [dtOptions]="dtOptions" class="row-border hover">-->
