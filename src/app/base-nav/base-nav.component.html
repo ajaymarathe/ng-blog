@@ -1,6 +1,8 @@
 <ul class="nav bg-primary py-2">
   <li class="nav-item" *ngIf="CurrentRoute == '/' ">
-    <a class="nav-link logo active" href="#">NgBlog</a>
+    <a class="nav-link logo active" routerLink="/">
+      <ng-fontawesome icon="magic" ></ng-fontawesome>
+      Blog</a>
   </li>
   <li class="nav-item" *ngIf="CurrentRoute !== '/' ">
     <a class="nav-link" (click)="backClicked()">

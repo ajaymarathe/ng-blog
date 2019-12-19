@@ -6,6 +6,7 @@ import { NgMaterialIconModule } from 'ng-material-icon';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { DataTablesModule } from 'angular-datatables';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { NgFontawesomeModule } from 'ng-fontawesome-icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -48,7 +49,8 @@ export function getHighlightLanguages() {
     NgMaterialIconModule,
     DataTablesModule,
     CKEditorModule,
-    HighlightModule
+    HighlightModule,
+    NgFontawesomeModule
   ],
   providers: [
     {

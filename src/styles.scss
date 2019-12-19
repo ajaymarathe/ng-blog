@@ -2,5 +2,15 @@
 @import "~bootcatch-themes/dist/epic/bootstrap.min.css";
 @import "~material-icons/iconfont/material-icons.css";
 @import "~highlight.js/styles/monokai-sublime.css";
+@import "font-awesome/css/font-awesome.min.css";
 
 
+//font-family
+//@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+//@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+body{
+  //font-family: 'Work Sans', sans-serif !important;
+  //font-family: 'Rubik', sans-serif !important;
+  font-family: 'Poppins', sans-serif !important;
+}
