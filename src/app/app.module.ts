@@ -13,13 +13,9 @@ import { AppComponent } from './app.component';
 import { PostComponent } from './post/post.component';
 import { HomeComponent } from './home/home.component';
 import { BaseNavComponent } from './base-nav/base-nav.component';
-import { CreatePostComponent } from './create-post/create-post.component';
-import { EditPostComponent } from './edit-post/edit-post.component';
-import { AdminComponent } from './admin/admin.component';
 import { RegisterComponent } from './auth/register/register.component';
 import {LoginComponent} from './auth/login/login.component';
 import { LimitToPipe } from './limit-to.pipe';
-import { SidebarComponent } from './admin/sidebar/sidebar.component';
 
 export function getHighlightLanguages() {
   return {
@@ -35,14 +31,9 @@ export function getHighlightLanguages() {
     PostComponent,
     HomeComponent,
     BaseNavComponent,
-    CreatePostComponent,
-    EditPostComponent,
-    AdminComponent,
     LoginComponent,
     RegisterComponent,
     LimitToPipe,
-    SidebarComponent,
-    
   ],
   imports: [
     BrowserModule,

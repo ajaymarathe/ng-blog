@@ -7,7 +7,7 @@
         <div class="card-body">
           <h3>{{ post.title }}</h3>
           <p  [innerHTML]="post.description | limitTo:  150 "></p>
-          <button class="btn btn-primary" [routerLink]="'post/'+post.slug" >More</button>
+          <button class="btn btn-primary" [routerLink]="'post/'+post.slug" >Read more</button>
         </div>
       </div>
       <!--pagination-->
