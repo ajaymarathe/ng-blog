@@ -6,27 +6,31 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PostService {
 
+  // url = 'http://blogapp.bootcatch.com/api/posts';
+  url = 'http://localhost:8000/api/posts';
+
   constructor(private http: HttpClient) { }
 
   GetAllPost() {
-    return this.http.get('http://localhost:8000/api/posts/');
+    return this.http.get(this.url);
   }
 
   OnePost(slug) {
-    return this.http.get('http://localhost:8000/api/posts/' + slug);
+    return this.http.get(this.url +'/' + slug);
   }
 
 
   CreatePost(post) {
-    return this.http.post('http://localhost:8000/api/posts/', {
-      title: post[0],
-      slug: post[0],
-      description: post[1],
-    });
+    // return this.http.post(this.url, {
+    //   title: post[0],
+    //   slug: post[0],
+    //   description: post[1],
+    // });
+    return this.http.post(this.url, post);
   }
 
   UpdatePost(updateData){
-    return this.http.patch('http://localhost:8000/api/posts/' + updateData[2],{
+    return this.http.patch(this.url +'/' + updateData[2],{
       title: updateData[0],
       slug: updateData[0],
       description: updateData[1],
@@ -35,7 +39,7 @@ export class PostService {
 
   // delete post
   DeleteShot(slug) {
-    return this.http.delete('http://localhost:8000/api/posts/' + slug);
+    return this.http.delete(this.url +'/' + slug);
   }
 
   // pagination

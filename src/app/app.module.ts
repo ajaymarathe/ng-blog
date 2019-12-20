@@ -19,6 +19,8 @@ import { AdminComponent } from './admin/admin.component';
 import { RegisterComponent } from './auth/register/register.component';
 import {LoginComponent} from './auth/login/login.component';
 import { LimitToPipe } from './limit-to.pipe';
+import { SidebarComponent } from './admin/sidebar/sidebar.component';
+import { NavComponent } from './admin/nav/nav.component';
 
 export function getHighlightLanguages() {
   return {
@@ -40,6 +42,8 @@ export function getHighlightLanguages() {
     LoginComponent,
     RegisterComponent,
     LimitToPipe,
+    SidebarComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,

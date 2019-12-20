@@ -1,71 +1,114 @@
-<base-nav></base-nav>
-<div class="container-fluid mt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <h1 class="h2">Admin</h1>
-      <table class=" table table-striped">
-        <thead>
-        <tr>
-          <th>ID</th>
-          <th>Post Title</th>
-          <th>Edit</th>
-          <th>Delete</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let post of posts">
-          <td>{{ post.id }}</td>
-          <td>{{ post.title }}</td>
-          <td><a  [routerLink]="['/edit',post.slug]">Edit</a></td>
-          <td><a (click)="DeletePost(post.slug)">Delete</a></td>
-        </tr>
-        </tbody>
-      </table>
-
-<!--      pagination-->
-      <!--pagination-->
-      <div class="d-flex justify-content-center">
-        <nav  aria-label="Page navigation example">
-          <ul class="pagination" *ngIf="paginate">
-            <li class="page-item">
-              <a class="page-link" (click)="PreviousPage()" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-              </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">{{ paginate.meta.current_page }}</a></li>
-            <li class="page-item">
-              <a class="page-link" (click)="NextPage()" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+<app-nav></app-nav>
+<div class="container-fluid dashboard">
+  <div class="row">
+    <div class="col-md-2 sidebar">
+      <div class="header">
+        <h5 class="d-flex align-items-center">
+          <ng-material-icon class="d-flex align-items-center" icon="tachometer"  size="1.5"></ng-material-icon> 
+          Dashboard
+        </h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Post</li>
+        <li class="list-group-item">Category</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
+    </div>
+    <div class="col-md-10">
+      <div class="row mb-3">
+        <div class="col-md-3">
+          <div class="card fancy-card">
+            <div class="card-body d-flex justify-content-between">
+              <div>
+                <p class="title">Total Blog</p>
+                <p class="heading">84</p>
+              </div>
+              <ng-material-icon class="d-flex align-items-center icon" icon="person"  size="1.5"></ng-material-icon>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card fancy-card">
+            <div class="card-body d-flex justify-content-between">
+              <div>
+                <p class="title">Total Blog</p>
+                <p class="heading">84</p>
+              </div>
+              <ng-material-icon class="d-flex align-items-center icon" icon="person"  size="1.5"></ng-material-icon>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card fancy-card">
+            <div class="card-body d-flex justify-content-between">
+              <div>
+                <p class="title">Total Blog</p>
+                <p class="heading">84</p>
+              </div>
+              <ng-material-icon class="d-flex align-items-center icon" icon="person"  size="1.5"></ng-material-icon>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card fancy-card">
+            <div class="card-body d-flex justify-content-between">
+              <div>
+                <p class="title">Total Blog</p>
+                <p class="heading">84</p>
+              </div>
+              <ng-material-icon class="d-flex align-items-center icon" icon="person"  size="1.5"></ng-material-icon>
+            </div>
+          </div>
+        </div>
       </div>
 
-<!--      <div class="table-responsive">-->
-<!--        <table datatable [dtOptions]="dtOptions" class="row-border hover">-->
-<!--          <thead>-->
-<!--          <tr>-->
-<!--            <th>ID</th>-->
-<!--            <th>Title</th>-->
-<!--            <th>Description</th>-->
-<!--          </tr>-->
-<!--          </thead>-->
-<!--          <tbody *ngIf="persons?.length != 0">-->
-<!--          <tr *ngFor="let person of persons">-->
-<!--            <td>{{ person.id }}</td>-->
-<!--            <td>{{ person.title }}</td>-->
-<!--            <td>{{ person.description }}</td>-->
-<!--          </tr>-->
-<!--          </tbody>-->
-<!--          <tbody *ngIf="persons?.length == 0">-->
-<!--          <tr>-->
-<!--            <td colspan="3" class="no-data-available">No data!</td>-->
-<!--          </tr>-->
-<!--          <tbody>-->
-<!--        </table>-->
-<!--      </div>-->
+  
+      <!-- <div class="row justify-content-center">
+        <div class="col-md-8"> -->
+          <!-- <h1 class="h2">Blogs</h1>
+          <table class=" table table-striped">
+            <thead>
+            <tr>
+              <th>ID</th>
+              <th>Post Title</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let post of posts">
+              <td>{{ post.id }}</td>
+              <td>{{ post.title }}</td>
+              <td><a  [routerLink]="['/edit',post.slug]">Edit</a></td>
+              <td><a (click)="DeletePost(post.slug)">Delete</a></td>
+            </tr>
+            </tbody>
+          </table> -->
 
+    <!--      pagination-->
+          <!--pagination-->
+          <!-- <div class="d-flex justify-content-center">
+            <nav  aria-label="Page navigation example">
+              <ul class="pagination" *ngIf="paginate">
+                <li class="page-item">
+                  <a class="page-link" (click)="PreviousPage()" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">{{ paginate.meta.current_page }}</a></li>
+                <li class="page-item">
+                  <a class="page-link" (click)="NextPage()" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div> -->
+
+        <!-- </div>
+      </div> -->
     </div>
   </div>
 </div>

@@ -20,11 +20,23 @@ export class CreatePostComponent implements OnInit {
   ngOnInit() {
   }
 
-  PublishPost() {
-    const post = [this.title, this.PostData];
-    console.log(post);
+  selectedFile: File;
 
-    this.Post_Service.CreatePost(post)
+  onFileChanged(event) {
+    this.selectedFile = event.target.files[0];
+    console.log('image',this.selectedFile);
+  }
+
+  PublishPost() {
+    const uploadData = new FormData();
+    uploadData.append('image', this.selectedFile, this.selectedFile.name);
+    uploadData.append('title', this.title);
+    uploadData.append('description', this.PostData);
+
+    // const post = [this.title, this.PostData];
+    console.log(uploadData);
+
+    this.Post_Service.CreatePost(uploadData)
       .subscribe(
         (response: Response) => {
           console.log(response);
