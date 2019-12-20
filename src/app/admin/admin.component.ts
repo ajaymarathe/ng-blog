@@ -3,6 +3,8 @@ import { PostService } from '../post.service';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import {Location} from '@angular/common';
 
+declare var $;
+
 class Person {
   id: number;
   title: string;
@@ -34,31 +36,14 @@ export class AdminComponent implements OnInit {
   paginate;
 
   ngOnInit(): void {
-    // const that = this;
-
-    // this.dtOptions = {
-    //   // pagingType: 'full_numbers',
-    //   // pageLength: 20,
-    //   // serverSide: true,
-    //   // processing: true,
-    //   ajax: (dataTablesParameters: any, callback) => {
-    //     that.http
-    //       .get<DataTablesResponse>(
-    //         'http://localhost:8000/api/posts/',
-    //         dataTablesParameters, {}
-    //       ).subscribe(resp => {
-    //       that.persons = resp.data;
-    //
-    //       callback({
-    //         recordsTotal: resp.meta.total,
-    //         recordsFiltered: resp.meta.total,
-    //         data: []
-    //       });
-    //     });
-    //   },
-    //   columns: [{ data: 'id' }, { data: 'title' }, { data: 'description' }]
-    // };
     this.AllData();
+    this.EnableSidebar();
+  }
+
+  EnableSidebar(){
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
   }
 
   AllData() {
