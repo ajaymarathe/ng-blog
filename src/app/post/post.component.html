@@ -3,6 +3,7 @@
   <div class="row">
     <div class="col-md-8">
       <div class="card" *ngIf="post">
+        <img class="card-img-top" [src]="'http://blogapp.bootcatch.com/images/'+post.image" [alt]="post.image">
         <div class="card-body" >
           <h3>{{ post.title }}</h3>
           <p [innerHTML]="post.description"></p>
