@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PostService {
 
-  // url = 'http://blogapp.bootcatch.com/api/posts';
-  url = 'http://localhost:8000/api/posts';
+  url = 'http://blogapp.bootcatch.com/api/posts';
+  // url = 'http://localhost:8000/api/posts';
 
   constructor(private http: HttpClient) { }
 
